@@ -3,110 +3,124 @@ import java.util.Map;
 
 public class Converter extends MainConverter {
 
-
-    //Skapa Hashmap för Engelska och Morse alfabetet
-    Map<String, String> EMHashMap = new HashMap<String, String>();
-
+    private static Map<String, String> emHashmap = new HashMap<String, String>();
 
     public Converter() {
-
-
-        // public String Converter; {
-        //Read the input data
-
-        //       String Converter = input();
-        //hämta in texten som ska översättas
-        //  return Converter;
-        // }
-        Map<String, String> getConverterMap;
-        {
-            //Fyll Hashmappen med bokstäver och morsekoder
-            EMHashMap.put("A", "*-");
-            EMHashMap.put("B", "-***");
-            EMHashMap.put("C", "-*-*");
-            EMHashMap.put("D", "-**");
-            EMHashMap.put("E", "*");
-            EMHashMap.put("F", "**-*");
-            EMHashMap.put("G", "--*");
-            EMHashMap.put("H", "****");
-            EMHashMap.put("I", "**");
-            EMHashMap.put("J", "*---");
-            EMHashMap.put("K", "-*-");
-            EMHashMap.put("L", "*-**");
-            EMHashMap.put("M", "--");
-            EMHashMap.put("N", "-*");
-            EMHashMap.put("O", "---");
-            EMHashMap.put("P", "*--*");
-            EMHashMap.put("Q", "--*-");
-            EMHashMap.put("R", "*-*");
-            EMHashMap.put("S", "***");
-            EMHashMap.put("T", "-");
-            EMHashMap.put("U", "**-");
-            EMHashMap.put("V", "***-");
-            EMHashMap.put("W", "*--");
-            EMHashMap.put("X", "-**-");
-            EMHashMap.put("Y", "-*--");
-            EMHashMap.put("Z", "--**");
-            EMHashMap.put("1", "*----");
-            EMHashMap.put("2", "**---");
-            EMHashMap.put("3", "***--");
-            EMHashMap.put("4", "****-");
-            EMHashMap.put("5", "*****");
-            EMHashMap.put("6", "-****");
-            EMHashMap.put("7", "--***");
-            EMHashMap.put("8", "---**");
-            EMHashMap.put("9", "----*");
-            EMHashMap.put("0", "-----");
-            EMHashMap.put("*-", "A");
-            EMHashMap.put("-***", "B");
-            EMHashMap.put("-*-*", "C");
-            EMHashMap.put("-**", "D");
-            EMHashMap.put("*", "E");
-            EMHashMap.put("**-*", "F");
-            EMHashMap.put("--*", "G");
-            EMHashMap.put("****", "H");
-            EMHashMap.put("**", "I");
-            EMHashMap.put("*---", "J");
-            EMHashMap.put("-*-", "K");
-            EMHashMap.put("*-**", "L");
-            EMHashMap.put("--", "M");
-            EMHashMap.put("-*", "N");
-            EMHashMap.put("---", "O");
-            EMHashMap.put("*--*", "P");
-            EMHashMap.put("--*-", "Q");
-            EMHashMap.put("*-*", "R");
-            EMHashMap.put("***", "S");
-            EMHashMap.put("-", "T");
-            EMHashMap.put("**-", "U");
-            EMHashMap.put("***-", "V");
-            EMHashMap.put("*--", "W");
-            EMHashMap.put("-**-", "X");
-            EMHashMap.put("-*--", "Y");
-            EMHashMap.put("--**", "Z");
-            EMHashMap.put("*----", "1");
-            EMHashMap.put("**---", "2");
-            EMHashMap.put("***--", "3");
-            EMHashMap.put("****-", "4");
-            EMHashMap.put("*****", "5");
-            EMHashMap.put("-****", "6");
-            EMHashMap.put("--***", "7");
-            EMHashMap.put("---**", "8");
-            EMHashMap.put("----*", "9");
-            EMHashMap.put("-----", "0");
-            EMHashMap.put(" ", ","); //mellanslag översätts som kommatecken
-
-            //   return EMHashMap;
-
-
-            public String Converter (String s){
-            return EMHashMap.get(s);
-        }
-        }
     }
 
-        //   System.out.print(EMHashMap());
+    //Skapa Hashmap för Engelska och Morse alfabetet
+    static String getFromHashmap(String translated) {
+        emHashmap.put("A", "*-");
+        emHashmap.put("B", "-***");
+        emHashmap.put("C", "-*-*");
+        emHashmap.put("D", "-**");
+        emHashmap.put("E", "*");
+        emHashmap.put("F", "**-*");
+        emHashmap.put("G", "--*");
+        emHashmap.put("H", "****");
+        emHashmap.put("I", "**");
+        emHashmap.put("J", "*---");
+        emHashmap.put("K", "-*-");
+        emHashmap.put("L", "*-**");
+        emHashmap.put("M", "--");
+        emHashmap.put("N", "-*");
+        emHashmap.put("O", "---");
+        emHashmap.put("P", "*--*");
+        emHashmap.put("Q", "--*-");
+        emHashmap.put("R", "*-*");
+        emHashmap.put("S", "***");
+        emHashmap.put("T", "-");
+        emHashmap.put("U", "**-");
+        emHashmap.put("V", "***-");
+        emHashmap.put("W", "*--");
+        emHashmap.put("X", "-**-");
+        emHashmap.put("Y", "-*--");
+        emHashmap.put("Z", "--**");
+        emHashmap.put("1", "*----");
+        emHashmap.put("2", "**---");
+        emHashmap.put("3", "***--");
+        emHashmap.put("4", "****-");
+        emHashmap.put("5", "*****");
+        emHashmap.put("6", "-****");
+        emHashmap.put("7", "--***");
+        emHashmap.put("8", "---**");
+        emHashmap.put("9", "----*");
+        emHashmap.put("0", "-----");
+        emHashmap.put("*-", "A");
+        emHashmap.put("-***", "B");
+        emHashmap.put("-*-*", "C");
+        emHashmap.put("-**", "D");
+        emHashmap.put("*", "E");
+        emHashmap.put("**-*", "F");
+        emHashmap.put("--*", "G");
+        emHashmap.put("****", "H");
+        emHashmap.put("**", "I");
+        emHashmap.put("*---", "J");
+        emHashmap.put("-*-", "K");
+        emHashmap.put("*-**", "L");
+        emHashmap.put("--", "M");
+        emHashmap.put("-*", "N");
+        emHashmap.put("---", "O");
+        emHashmap.put("*--*", "P");
+        emHashmap.put("--*-", "Q");
+        emHashmap.put("*-*", "R");
+        emHashmap.put("***", "S");
+        emHashmap.put("-", "T");
+        emHashmap.put("**-", "U");
+        emHashmap.put("***-", "V");
+        emHashmap.put("*--", "W");
+        emHashmap.put("-**-", "X");
+        emHashmap.put("-*--", "Y");
+        emHashmap.put("--**", "Z");
+        emHashmap.put("*----", "1");
+        emHashmap.put("**---", "2");
+        emHashmap.put("***--", "3");
+        emHashmap.put("****-", "4");
+        emHashmap.put("*****", "5");
+        emHashmap.put("-****", "6");
+        emHashmap.put("--***", "7");
+        emHashmap.put("---**", "8");
+        emHashmap.put("----*", "9");
+        emHashmap.put("-----", "0");
+        emHashmap.put(" ", " ");
+
+        return emHashmap.get(translated);
+    }
+
+    public String EtoM(String s) {
+        return getFromHashmap(s);
+    }
+
+    public String MtoE(String s) {
+        return getFromHashmap(s);
+    }
+
+    public String NrtoM(String s) {
+        return getFromHashmap(s);
+    }
+
+    public String MtoNr(String s) {
+        return getFromHashmap(s);
+    }
+
+    //konvertera inmatad information
+    public static String Translate(String input) {
+        String output = "";
+        //kontrollera om det är text eller siffror som matats in annars hoppa ner då det är det morsekod
+        if (Character.isLetter(input.charAt(0)) || Character.isDigit(input.charAt(0))) {
+            for (int i = 0; i < input.length(); i++) {
+                Character character = Character.toUpperCase(input.charAt(i));//gör om alla tecken till stora
+                output += " " + getFromHashmap(character.toString());//översätter till output
+            }
+            return output;  //  return översatt  text;
+        }   //nedan översätter morsekod till text
+        String character[] = input.split(" ");//delar stringen så den enstaka blir bokstäver
+        output = "";
+        for (int i = 0; i < character.length; i++) {
+            output += getFromHashmap(character[i]);//översätter till output
+        }
+        return output;  //  return översatt text;
     }
 
 
-
-
+}
